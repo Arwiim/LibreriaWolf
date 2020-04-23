@@ -19,7 +19,7 @@ class PrestamoManager(models.Manager):
     
     def num_libros_prestados(self):
         resultado = self.values( #nos devuelve una lista en diccionarios
-            'libro' #el group by por la fk
+            'libro' #el group by por la fk 
         ).annotate(
             num_prestados = Count('libro'),
             titulo = Lower('libro__titulo'),#agregar al diccionario el titulo

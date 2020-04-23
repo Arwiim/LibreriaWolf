@@ -19,4 +19,5 @@ urlpatterns = [
     path('admin', admin.site.urls),
     re_path('', include('applications.autores.urls')),
     re_path('', include('applications.libros.urls')),
+    re_path('', include('applications.lectores.urls')),
 ]
